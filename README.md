@@ -1,1 +1,1 @@
-https://simula-star.github.io/Markdown/cv
+https://simula-star.github.io/web-proga/cv
