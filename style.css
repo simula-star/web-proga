@@ -110,10 +110,8 @@ body {
 }
 
 .cart-icon {
-    /* Управляем размером самой картинки внутри кнопки */
     width: 56px;
     height: 56px;
-    /* Сохраняем пропорции, чтобы иконка не сплющилась */
     object-fit: contain;
 }
 
@@ -121,343 +119,62 @@ body {
     background-color: #000000;
 }
 
-
-/* ==================== ГЛАВНЫЙ ЭКРАН (HERO) ==================== */
-
-.hero {
-    background-color: #B6E2E9;
-    /* Светло-голубой фон */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 80px;
+/* Hero*/
+.hero{
+    background-color: #b1dde4;
+    top: 73px;
+    height: 820px;
 }
 
 .hero-content {
-    text-align: center;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 30px;
-}
-
-.hero-title {
-    font-size: 48px;
-    font-weight: 500;
-    letter-spacing: -1px;
-}
-
-.bold-text {
-    font-weight: 800;
-}
-
-.cta-button {
-    background-color: #262626;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 16px 32px;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: 500;
-    transition: background-color 0.2s;
-}
-
-.cta-button:hover {
-    background-color: #000000;
-}
-
-.hero-image-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-
-.hero-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-
-/* ==================== OUR FAVOURITE PICKS ==================== */
-
-.favourite-picks {
-    padding: 80px 40px;
-}
-
-.section-title {
-    font-size: 32px;
-    font-weight: 800;
-    margin-bottom: 40px;
-}
-
-.cards-slider-wrapper {
-    position: relative;
-}
-
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.restaurant-card {
-    background-color: #f9f9f9;
-    border-radius: 12px;
-    overflow: hidden;
-    /* Чтобы картинка не вылезала за скругленные углы */
-    display: flex;
+    text-align: center;
     flex-direction: column;
 }
 
-.card-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.hero-text{
+    width: 621px;
+    height: 56px;
+    top: 131px;
+    left: 414px;
+    text-align: center;
+    font: Montserrat;
+    size: 43.95px;
+    line-height: 56px;
+    letter-spacing: -5%;
 }
 
-.card-info {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.bold-text{
+    font-weight: 900;
 }
-
-.card-title {
-    font-size: 20px;
+.jold-text{
     font-weight: 700;
 }
 
-.card-rating {
-    font-size: 14px;
-    font-weight: 600;
-    color: #222;
+.cta-button{
+    text-align: center;
+    width: 189px;
+    height: 56px;
+    top: 310px;
+    left: 630px;
+    padding: 8px 24px 8px 24px;
+    gap: 10px;
+    background-color: #202020;
+    border-radius: 4px;
 }
 
-.star {
-    color: #555;
-}
-
-.rating-text {
-    color: #777;
+.cta-text{
+    text-align: center;
+    font: Hind;
     font-weight: 400;
+    size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #ffffff;
+    width: 141px;
+    height: 29px;
 }
-
-.card-desc {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 5px;
-}
-
-.card-tag {
-    background-color: #e5e5e5;
-    color: #444;
-    font-size: 12px;
-    padding: 6px 10px;
-    border-radius: 4px;
-    align-self: flex-start;
-}
-
-
-/* Кнопка-стрелка поверх карточек */
-
-.slider-arrow {
-    position: absolute;
-    right: -24px;
-    /* Сдвигаем вправо */
-    top: 50%;
-    transform: translateY(-50%);
-    width: 48px;
-    height: 48px;
-    background-color: #fff;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #222;
-}
-
-
-/* ==================== AWARD WINNING ==================== */
-
-.award-winning {
-    background-color: #e4f7c5;
-    /* Салатовый фон */
-    padding: 80px 0;
-    overflow: hidden;
-}
-
-.award-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.award-text-content {
-    flex: 1;
-    max-width: 400px;
-}
-
-.award-title {
-    font-size: 40px;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 30px;
-    letter-spacing: -1px;
-}
-
-.btn-dark {
-    display: inline-block;
-    background-color: #222;
-    color: #fff;
-    text-decoration: none;
-    padding: 16px 24px;
-    border-radius: 4px;
-    font-weight: 500;
-}
-
-
-/* Шахматная сетка картинок */
-
-.award-masonry {
-    flex: 1.5;
-    display: flex;
-    gap: 20px;
-    height: 450px;
-    /* Фиксируем высоту для эффекта обрезки */
-}
-
-.masonry-col {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    flex: 1;
-}
-
-.offset-col {
-    transform: translateY(40px);
-    /* Сдвигаем среднюю колонку вниз */
-}
-
-.mini-card {
-    background-color: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.mini-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-}
-
-.mini-card-label {
-    padding: 15px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-
-/* Для карточек, где только текст (как The Woodland) */
-
-.mini-card.text-only {
-    padding: 30px 15px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-
-/* Адаптивность */
-
-@media (max-width: 992px) {
-    .cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .award-inner {
-        flex-direction: column;
-    }
-    .award-masonry {
-        height: auto;
-        margin-top: 40px;
-    }
-}
-
-@media (max-width: 768px) {
-    .cards-grid {
-        grid-template-columns: 1fr;
-    }
-    .nav-link {
-        display: none;
-    }
-    .hero-title {
-        font-size: 36px;
-    }
-    .award-title {
-        font-size: 32px;
-    }
-}
-
-
-/* --- Секция категорий --- */
-
-.cat-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.view-all {
-    color: #666;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.cat-slider {
-    display: flex;
-    gap: 20px;
-    position: relative;
-    padding-bottom: 40px;
-}
-
-.cat-item {
-    background: #f7f7f7;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    flex: 1;
-    min-width: 120px;
-}
-
-.cat-circle {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto 10px;
-}
-
-.cat-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.cat-item p {
-    font-weight: 600;
-    font-size: 14px;
-}
-
 
 /* --- Footer --- */
 
