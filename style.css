@@ -12,11 +12,6 @@ h1, h2, h3 {
   font-weight: 700;
 }
 
-p, body {
-  font-family: 'Hind', sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
-}
 body {
     background-color: #ffffff;
     color: #202020;
@@ -28,7 +23,6 @@ body {
 /* Ограничитель ширины контента */
 
 .container {
-    max-width: 1440px;
     max-height: 3481px;
     margin: 0 auto;
     padding: 0 40px;
@@ -106,14 +100,12 @@ body {
     border: none;
     padding: 16px;
     background-color: #202020;
-    /* Внутренние отступы вокруг картинки */
     border-radius: 8px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.2s;
-    /* Убедимся, что у кнопки есть минимальный размер */
     width: 56px;
     height: 56px;
     gap: 10px;
@@ -135,6 +127,7 @@ body {
     top: 73px;
     height: 820px;
     text-align: center;
+    gap: 40px;
 }
 
 .hero-content {
@@ -142,52 +135,52 @@ body {
     align-items: center;
     text-align: center;
     flex-direction: column;
-    gap: 30px;
+    gap: 50px;
 }
 
 .hero-text{
-    width: 621px;
-    font: Montserrat;
-    size: 43.95px;
-    line-height: 56px;
+    font-weight: 700;
+    max-height: 56px;
+    font-size: 43.95px;
     letter-spacing: -5%;
-    margin-top: auto;
-    text-align: justify;
-    text-align-last: justify;
-    letter-spacing: 0.1em;
+    width: 621px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 103px;
 }
 
 .bold-text{
+    font-size: 43.95px;
+    letter-spacing: -5%;
     font-weight: 900;
-    margin: 0;
-}
-.jold-text{
-    font-weight: 700;
-    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 .cta-button{
     text-align: center;
     width: 189px;
     height: 56px;
-    top: 310px;
-    left: 630px;
-    padding: 8px 24px 8px 24px;
-    gap: 10px;
+    padding: 8px 24px;
     background-color: #202020;
     border-radius: 4px;
+    gap: 10px;
+    font-family: 'Hind', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #ffffff;
+    border: 0;
+    margin-bottom: 0;
 }
 
-.cta-text{
+.cta-button-text{
     text-align: center;
-    font: Hind;
+    font-family: 'Hind', sans-serif;
     font-weight: 400;
-    size: 18px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    font-size: 18px;
     color: #ffffff;
-    width: 141px;
-    height: 29px;
+    text-align: center;
+    text-decoration: none;
 }
 
 .hero-image{
@@ -197,8 +190,129 @@ body {
     max-width: 1440px;
 }
 
+.restaurant-section{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-rows: 48px auto;
+    grid-template-columns: repeat(3, 427px);
+    column-gap: 10px;
+    row-gap: 20px;
+    grid-template-areas: 
+        "text coloumn coloumn"
+        "mira kara_fin tkuy";
+    width: 1359px;
+    max-width: 100%;
+}
 
+.rest-text{
+    grid-area: text;
+    color: #2c2c2c;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 35.16px;
+    margin-left: 0;
+}
 
+.rest-mira{
+    grid-area: mira;
+    color: #2c2c2c;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22.5px;
+    background-color: #f9f9f9;
+    gap: 8px;
+    max-width: 100%;
+    height: 240px;
+}
+
+.rest-card{
+    color: #2c2c2c;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22.5px;
+    background-color: #f9f9f9;
+    gap: 8px;
+    padding: 16px 16px 16px;
+}
+.rest-mira img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.rest-kara_fin{
+    grid-area: kara_fin;
+    color: #2c2c2c;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22.5px;
+    background-color: #f9f9f9;
+    gap: 8px;
+    max-width: 100%;
+    height: 240px;
+}
+
+.rest-kara_fin img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.rest-tkuy{
+    grid-area: tkuy;
+    color: #2c2c2c;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22.5px;
+    background-color: #f9f9f9;
+    gap: 8px;
+    max-width: 100%;
+    height: 240px;
+}
+
+.rest-tkuy img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.text-rate{
+    color: #596F72;
+    font-family: 'Hind', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.text-npfb{
+    color: #4d4d4d;
+    font-family: 'Hind', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.comf-food-cont{
+    width: 110px;
+    height: 32px;
+    border-radius: 4px;
+    padding: 3px 8px;
+    margin-top: 10px;
+    background-color: #e9e9e9;
+    text-align: center;
+}
+
+.comf-food{
+    color: #636363;
+    font-family: 'Hind', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
 /* --- Footer --- */
 
 .footer {
