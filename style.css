@@ -140,7 +140,7 @@ body {
     align-items: center;
     text-align: center;
     flex-direction: column;
-    gap: 50px;
+    gap: 51px;
 }
 
 .hero-text {
@@ -330,6 +330,7 @@ body {
     grid-template-columns: 720px 720px;
     grid-template-rows: 65% 35%;
     grid-template-areas: "text pic" "button pic";
+    justify-content: center;
 }
 
 .awrd-text-cont {
@@ -385,57 +386,157 @@ body {
     letter-spacing: 0%;
     text-align: center;
 }
+/*--------------------*/
 
+.categories-pic{
+    display: grid;
+    grid-template-columns: repeat(6, 200px);
+    column-gap: 20px;
+    grid-template-areas: "pizza burgers desserts sushi asian comffood";
+    height: 197px;
+    max-width: 1440px;
+    justify-content: start;
+    margin: 0 auto;
+    padding-left: 56px;
+}
+
+.categ-text-but{
+    display: flex;
+    height: 69px;
+    width: 1440px;
+    margin: auto;
+    
+}
+
+.text-categ{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 35.16px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    color: #2c2c2c;
+    margin-top: 0;
+    margin-left: 56px;
+    margin-right: auto;
+}
+
+.button-categ{
+    background-color: #fff;
+    color: #202020;
+    padding: 8px 24px;
+    width: 265px;
+    height: 56px;
+    border-radius: 4px;
+    margin-top: 0;
+    margin-right: 30px;
+    margin-left: auto;
+    margin-bottom: auto;
+    display: block;
+    box-shadow: none;
+    appearance: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.button-text-categ{
+    font-family: 'Hind', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.categ-cont{
+    width: 200px;
+    height: 197px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    align-items: center;
+    color: #2c2c2c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.categ-cont-text{
+    font-family: 'Hind', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0;
+}
+
+.categ-cont-pic{
+    width: 104px;
+    height: 104px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 24px;
+}
+
+.area-pizza    { grid-area: pizza; }
+.area-burgers  { grid-area: burgers; }
+.area-desserts { grid-area: desserts; }
+.area-sushi    { grid-area: sushi; }
+.area-asian    { grid-area: asian; }
+.area-comffood { grid-area: comffood; }
 
 /* --- Footer --- */
 
-.footer {
-    background-color: #222;
+.footer{
+    background-color: #2c2c2c;
+    height: 451px;
+}
+
+.footer-cont{
+    display: grid;
+    grid-template-columns: 500px 330px 330px auto;
+    max-width: 1440px;
+    margin: 0 auto;
+    grid-template-areas: "logo disco media apps";
+}
+
+.footer-logo{
+    grid-area: logo;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 91px;
+    width: 120px;
+    height: 105px;
+    object-fit: cover;
+}
+
+.footer-disc{
+    margin-top: 48px;
+    gap: 10px;
+    max-width: 200px;
+    max-height: 146px;
     color: #fff;
-    padding: 80px 0;
-    margin-top: 60px;
-}
-
-.footer-inner {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
 }
 
-.footer-logo-side {
-    flex: 1;
+.footer-disc-high{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22.5px;
+    letter-spacing: 0%;
+    line-height: 100%;
 }
 
-.footer-big-icon {
-    width: 100px;
-    /* Тот самый PNG логотип (голова лисы) */
-    opacity: 0.8;
-}
-
-.footer-links {
-    flex: 2;
-    display: flex;
-    justify-content: space-around;
-}
-
-.footer-col h4 {
-    margin-bottom: 20px;
+.footer-disc a {
+    font-family: 'Hind', sans-serif;
+    font-weight: 400;
     font-size: 18px;
-}
-
-.footer-col a {
-    display: block;
-    color: #ccc;
     text-decoration: none;
-    margin-bottom: 12px;
-    font-size: 14px;
-    transition: color 0.2s;
-}
-
-.footer-col a:hover {
     color: #fff;
 }
 
+.disc-area {grid-area: disco;}
+.media-area {grid-area: media;}
+.apps-area {grid-area: apps;}
 
 /* Общая кнопка стрелки для слайдеров */
 
