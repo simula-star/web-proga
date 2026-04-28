@@ -47,11 +47,13 @@ body {
 
 .logo {
     left: 56px;
-    top: 15px;
     width: 154px;
     height: 42px;
     color: #202020;
     text-decoration: none;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .logo-icon {
@@ -62,6 +64,7 @@ body {
 }
 
 .logo-text {
+    font-family: 'Montserrat', sans-serif;
     font-size: 22px;
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -72,31 +75,34 @@ body {
 
 .navigation {
     display: flex;
-    align-items: center;
+    flex-direction: row;
     gap: 30px;
 }
 
-.nav-link {
-    text-decoration: none;
-    color: #202020;
+.nav-home{
+    font-family: 'Hind', sans-serif;
+    font-weight: 400;
     font-size: 18px;
-    transition: color 0.2s;
-    width: 400;
-    left: 1145px;
-    top: 9px;
-}
-
-.nav-link-home {
-    text-decoration: none;
-    left: 1043px;
-    top: 9px;
+    line-height: 100%;
     width: 94px;
     height: 55px;
+    text-decoration: none;
+    color: #202020;
+    text-align: center;
+    padding-top: 20px;
 }
 
-.nav-link:hover,
-.nav-link-home.active {
+.nav-rest{
+    font-family: 'Hind', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    width: 159px;
+    height: 55px;
+    text-decoration: none;
     color: #202020;
+    text-align: center;
+    padding-top: 20px;
 }
 
 .cart-btn {
@@ -327,9 +333,8 @@ body {
     height: 487px;
     background-color: #E5F8BC;
     display: grid;
-    grid-template-columns: 720px 720px;
-    grid-template-rows: 65% 35%;
-    grid-template-areas: "text pic" "button pic";
+    grid-template-columns: 720px 240px 240px 240px;
+    grid-template-areas: "textbut pic123 pic456 pic789";
     justify-content: center;
 }
 
@@ -340,12 +345,12 @@ body {
 }
 
 .awrd-text-box {
-    width: 539px;
-    height: 168px;
     margin-left: 56px;
-    margin-top: auto;
-    margin-bottom: 5%;
-    grid-area: 1;
+    margin-top: 112px;
+    grid-area: textbut;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .awrd-text {
@@ -371,8 +376,6 @@ body {
     width: 265px;
     height: 56px;
     border-radius: 4px;
-    margin-left: 56px;
-    margin-top: 0;
     margin-bottom: auto;
     display: block;
     grid-area: button;
@@ -385,6 +388,73 @@ body {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
+}
+
+.pic-cont{
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    width: 202px;
+    height: 305px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+.pic-cont img{
+    width: 186px;
+    object-fit: cover;
+    object-position: center;
+    height: 220px;
+    border-radius: 8px;
+}
+
+.pic-cont-p{
+    font-family: 'Hind', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 100%;
+    width: 135px;
+    height: 29px;
+}
+
+.pic123{
+    grid-area: pic123; 
+    gap: 25px; 
+    display: flex; 
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+.pic123 > * {
+    transform: translateY(-234px);
+}
+
+.pic456{
+    grid-area: pic456; 
+    gap: 25px; 
+    display: flex; 
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+.pic456 > * {
+    transform: translateY(-70px);
+}
+
+.pic789{
+    grid-area: pic789; 
+    gap: 25px; 
+    display: flex; 
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+.pic789 > * {
+    transform: translateY(-234px);
 }
 /*--------------------*/
 
