@@ -43,6 +43,7 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #e9e9e9;
+    height: 72px;
 }
 
 .logo {
@@ -79,7 +80,7 @@ body {
     gap: 30px;
 }
 
-.nav-home{
+.nav-home {
     font-family: 'Hind', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -92,7 +93,7 @@ body {
     padding-top: 20px;
 }
 
-.nav-rest{
+.nav-rest {
     font-family: 'Hind', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -336,7 +337,7 @@ body {
 }
 
 .restaurant-section {
-    position: relative; 
+    position: relative;
 }
 
 .slider-arrow {
@@ -349,7 +350,7 @@ body {
     background-color: #ffffff;
     border-radius: 50%;
     border: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -360,6 +361,7 @@ body {
 .slider-arrow:hover {
     background-color: #f9f9f9;
 }
+
 
 /*--------------------------*/
 
@@ -425,7 +427,7 @@ body {
     text-align: center;
 }
 
-.pic-cont{
+.pic-cont {
     background-color: #f9f9f9;
     border-radius: 8px;
     width: 202px;
@@ -439,7 +441,7 @@ body {
     padding: 8px;
 }
 
-.pic-cont img{
+.pic-cont img {
     width: 186px;
     object-fit: cover;
     object-position: center;
@@ -447,7 +449,7 @@ body {
     border-radius: 8px;
 }
 
-.pic-cont-p{
+.pic-cont-p {
     font-family: 'Hind', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -456,44 +458,46 @@ body {
     height: 29px;
 }
 
-.pic123{
-    grid-area: pic123; 
-    gap: 25px; 
-    display: flex; 
+.pic123 {
+    grid-area: pic123;
+    gap: 25px;
+    display: flex;
     flex-direction: column;
     overflow-y: hidden;
 }
 
-.pic123 > * {
+.pic123>* {
     transform: translateY(-234px);
 }
 
-.pic456{
-    grid-area: pic456; 
-    gap: 25px; 
-    display: flex; 
+.pic456 {
+    grid-area: pic456;
+    gap: 25px;
+    display: flex;
     flex-direction: column;
     overflow-y: hidden;
 }
 
-.pic456 > * {
+.pic456>* {
     transform: translateY(-70px);
 }
 
-.pic789{
-    grid-area: pic789; 
-    gap: 25px; 
-    display: flex; 
+.pic789 {
+    grid-area: pic789;
+    gap: 25px;
+    display: flex;
     flex-direction: column;
     overflow-y: hidden;
 }
 
-.pic789 > * {
+.pic789>* {
     transform: translateY(-234px);
 }
+
+
 /*--------------------*/
 
-.categories-pic{
+.categories-pic {
     display: grid;
     grid-template-columns: repeat(6, 200px);
     column-gap: 20px;
@@ -505,15 +509,14 @@ body {
     padding-left: 56px;
 }
 
-.categ-text-but{
+.categ-text-but {
     display: flex;
     height: 69px;
     width: 1440px;
     margin: auto;
-    
 }
 
-.text-categ{
+.text-categ {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 35.16px;
@@ -525,7 +528,7 @@ body {
     margin-right: auto;
 }
 
-.button-categ{
+.button-categ {
     background-color: #fff;
     color: #202020;
     padding: 8px 24px;
@@ -545,7 +548,7 @@ body {
     cursor: pointer;
 }
 
-.button-text-categ{
+.button-text-categ {
     font-family: 'Hind', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -553,7 +556,7 @@ body {
     letter-spacing: 0%;
 }
 
-.categ-cont{
+.categ-cont {
     width: 200px;
     height: 197px;
     border-radius: 8px;
@@ -566,14 +569,14 @@ body {
     gap: 16px;
 }
 
-.categ-cont-text{
+.categ-cont-text {
     font-family: 'Hind', sans-serif;
     font-weight: 500;
     font-size: 18px;
     margin: 0;
 }
 
-.categ-cont-pic{
+.categ-cont-pic {
     width: 104px;
     height: 104px;
     object-fit: cover;
@@ -581,21 +584,39 @@ body {
     margin-top: 24px;
 }
 
-.area-pizza    { grid-area: pizza; }
-.area-burgers  { grid-area: burgers; }
-.area-desserts { grid-area: desserts; }
-.area-sushi    { grid-area: sushi; }
-.area-asian    { grid-area: asian; }
-.area-comffood { grid-area: comffood; }
+.area-pizza {
+    grid-area: pizza;
+}
+
+.area-burgers {
+    grid-area: burgers;
+}
+
+.area-desserts {
+    grid-area: desserts;
+}
+
+.area-sushi {
+    grid-area: sushi;
+}
+
+.area-asian {
+    grid-area: asian;
+}
+
+.area-comffood {
+    grid-area: comffood;
+}
+
 
 /* --- Footer --- */
 
-.footer{
+.footer {
     background-color: #2c2c2c;
     height: 451px;
 }
 
-.footer-cont{
+.footer-cont {
     display: grid;
     grid-template-columns: 500px 330px 330px auto;
     max-width: 1440px;
@@ -603,7 +624,7 @@ body {
     grid-template-areas: "logo disco media apps";
 }
 
-.footer-logo{
+.footer-logo {
     grid-area: logo;
     margin-left: auto;
     margin-right: auto;
@@ -613,7 +634,7 @@ body {
     object-fit: cover;
 }
 
-.footer-disc{
+.footer-disc {
     margin-top: 48px;
     gap: 10px;
     max-width: 200px;
@@ -623,7 +644,7 @@ body {
     flex-direction: column;
 }
 
-.footer-disc-high{
+.footer-disc-high {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 22.5px;
@@ -639,9 +660,18 @@ body {
     color: #fff;
 }
 
-.disc-area {grid-area: disco;}
-.media-area {grid-area: media;}
-.apps-area {grid-area: apps;}
+.disc-area {
+    grid-area: disco;
+}
+
+.media-area {
+    grid-area: media;
+}
+
+.apps-area {
+    grid-area: apps;
+}
+
 
 /* Общая кнопка стрелки для слайдеров */
 
