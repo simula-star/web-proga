@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Registration | MealDrop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="catalog.css">
+  <link rel="stylesheet" href="lab8.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="lab9.css">
+  <link rel="stylesheet" href="lab10.css">
+</head>
+<body>
+<header class="header container">
+  <img src="menu 1.png" alt="" class="menu1">
+  <a href="saut.html" class="logo">
+    <img src="Logo_blue.png" alt="Logo" class="logo-icon">
+    <span class="logo-text">MealDrop</span>
+  </a>
+  <nav class="navigation">
+    <a href="saut.html" class="nav-home">Home</a>
+    <a href="catalog.html" class="nav-rest">Catalog</a>
+    <a href="favorites.html" class="nav-fav">❤ Favorites</a>
+    <a href="feedback.html" class="nav-fav">Feedback</a>
+    <a href="cart.html" class="cart-btn"><img src="grocery_basket_icon.png" alt="cart"></a>
+  </nav>
+</header>
+
+<main class="container form-page">
+  <section class="form-card">
+    <h1>Authorization</h1>
+    <p class="form-note">Use an existing account to test client and administrator roles.</p>
+    <form id="loginForm" novalidate>
+      <label>Email <span>*</span><input id="loginEmail" type="email" autocomplete="off" required></label>
+      <small class="field-error" data-error-for="loginEmail"></small>
+      <label>Password <span>*</span><input id="loginPassword" type="password" autocomplete="off" required></label>
+      <small class="field-error" data-error-for="loginPassword"></small>
+      <button id="loginBtn" class="submit-btn" type="submit">Log in</button>
+    </form>
+    <div class="test-users">
+      <b>Test users:</b><br>
+      admin@mealdrop.local / Admin123!<br>
+      client@mealdrop.local / Client123!
+    </div>
+  </section>
+
+  <section class="form-card">
+    <h1>Registration</h1>
+    <form id="registerForm" novalidate>
+      <div class="form-row">
+        <label>Last name <span>*</span><input id="lastName" type="text" autocomplete="off" required></label>
+        <label>First name <span>*</span><input id="firstName" type="text" autocomplete="off" required></label>
+        <label>Middle name<input id="middleName" type="text" autocomplete="off"></label>
+      </div>
+      <small class="field-error" data-error-for="names"></small>
+
+      <div class="form-row">
+        <label>Belarus phone <span>*</span><input id="phone" type="tel" placeholder="+375291234567" autocomplete="off" required></label>
+        <label>Email <span>*</span><input id="email" type="email" placeholder="name@example.com" autocomplete="off" required></label>
+        <label>Birth date <span>*</span><input id="birthDate" type="date" required></label>
+      </div>
+      <small class="field-error" data-error-for="contacts"></small>
+
+      <div class="password-mode">
+        <label><input type="radio" name="passwordMode" value="manual" checked> Create password myself</label>
+        <label><input type="radio" name="passwordMode" value="auto"> Generate password automatically</label>
+      </div>
+
+      <div id="manualPasswordFields" class="form-row">
+        <label>Password <span>*</span><input id="password" type="password" autocomplete="new-password"></label>
+        <label>Repeat password <span>*</span><input id="repeatPassword" type="password" autocomplete="new-password"></label>
+      </div>
+      <small class="field-error" data-error-for="password"></small>
+      <div id="generatedPasswordBox" class="generated-box" hidden></div>
+
+      <div class="nickname-box">
+        <label>Nickname <span>*</span><input id="nickname" type="text" autocomplete="off" readonly required></label>
+        <button id="generateNickname" type="button">Generate nickname</button>
+      </div>
+      <small class="field-error" data-error-for="nickname"></small>
+
+      <label class="agreement"><input id="agreement" type="checkbox" required> I have read and accept the User Agreement <span>*</span></label>
+      <small class="field-error" data-error-for="agreement"></small>
+
+      <button id="registerBtn" class="submit-btn" type="submit" disabled>Register</button>
+    </form>
+  </section>
+</main>
+
+<script src="common.js"></script>
+<script src="auth.js"></script>
+<script src="lab9.js"></script>
+<script src="lab10.js"></script>
+</body>
+</html>

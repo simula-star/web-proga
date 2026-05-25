@@ -1,0 +1,173 @@
+{
+  "foods": [
+    {
+      "id": 1,
+      "name": "Pepperoni Pizza",
+      "category": "Pizza",
+      "price": 15,
+      "rating": 4.8,
+      "description": "Hot pizza with pepperoni",
+      "image": "pizza_pic.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Cheese Burger",
+      "category": "Burgers",
+      "price": 12,
+      "rating": 4.5,
+      "description": "Juicy burger with cheese",
+      "image": "burgers_pic.png"
+    },
+    {
+      "id": 3,
+      "name": "Chocolate Cake",
+      "category": "Desserts",
+      "price": 8,
+      "rating": 4.9,
+      "description": "Sweet chocolate dessert",
+      "image": "desserts_pic.png"
+    },
+    {
+      "id": 4,
+      "name": "Philadelphia Roll",
+      "category": "Sushi",
+      "price": 18,
+      "rating": 4.7,
+      "description": "Classic sushi roll",
+      "image": "sushi_pic.png"
+    },
+    {
+      "id": 5,
+      "name": "Noodles Wok",
+      "category": "Asian",
+      "price": 14,
+      "rating": 4.4,
+      "description": "Asian noodles with chicken",
+      "image": "asian_pic.png"
+    },
+    {
+      "id": 6,
+      "name": "Margarita Pizza",
+      "category": "Pizza",
+      "price": 11,
+      "rating": 4.2,
+      "description": "Classic cheese pizza",
+      "image": "pizza_pic.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Spicy Burger",
+      "category": "Burgers",
+      "price": 14,
+      "rating": 4.6,
+      "description": "Burger with jalapeno",
+      "image": "burgers_pic.png"
+    },
+    {
+      "id": 8,
+      "name": "Ice Cream",
+      "category": "Desserts",
+      "price": 6,
+      "rating": 4.3,
+      "description": "Vanilla ice cream with chocolate syrup",
+      "image": "desserts_pic.png"
+    },
+    {
+      "id": 9,
+      "name": "California Roll",
+      "category": "Sushi",
+      "price": 16,
+      "rating": 4.6,
+      "description": "Sushi roll with crab and avocado",
+      "image": "sushi_pic.png"
+    },
+    {
+      "id": 10,
+      "name": "Fried Rice",
+      "category": "Asian",
+      "price": 12,
+      "rating": 4.1,
+      "description": "Fried rice with vegetables and egg",
+      "image": "asian_pic.png"
+    },
+    {
+      "id": 11,
+      "name": "BBQ Pizza",
+      "category": "Pizza",
+      "price": 16,
+      "rating": 4.7,
+      "description": "Pizza with BBQ chicken and red onion",
+      "image": "pizza_pic.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Vegan Burger",
+      "category": "Burgers",
+      "price": 13,
+      "rating": 4.4,
+      "description": "Plant-based burger with lettuce and tomato",
+      "image": "burgers_pic.png"
+    },
+    {
+      "id": 13,
+      "name": "Cheesecake",
+      "category": "Desserts",
+      "price": 9,
+      "rating": 4.8,
+      "description": "New York style cheesecake",
+      "image": "desserts_pic.png"
+    },
+    {
+      "id": 14,
+      "name": "Salmon Nigiri",
+      "category": "Sushi",
+      "price": 15,
+      "rating": 4.5,
+      "description": "Fresh salmon over pressed rice",
+      "image": "sushi_pic.png"
+    },
+    {
+      "id": 15,
+      "name": "Spring Rolls",
+      "category": "Asian",
+      "price": 7,
+      "rating": 4.2,
+      "description": "Crispy rolls filled with vegetables",
+      "image": "asian_pic.png"
+    }
+  ],
+  "cart": [],
+  "favorites": [],
+  "users": [
+    {
+      "id": 1,
+      "phone": "+375291234567",
+      "email": "admin@mealdrop.local",
+      "birthDate": "1995-01-01",
+      "lastName": "Admin",
+      "firstName": "MealDrop",
+      "middleName": "",
+      "nickname": "AdminMeal001",
+      "password": "Admin123!",
+      "role": "administrator",
+      "agreement": true,
+      "createdAt": "2026-05-24T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "phone": "+375331234567",
+      "email": "client@mealdrop.local",
+      "birthDate": "2000-05-10",
+      "lastName": "Client",
+      "firstName": "Test",
+      "middleName": "",
+      "nickname": "ClientMeal001",
+      "password": "Client123!",
+      "role": "client",
+      "agreement": true,
+      "createdAt": "2026-05-24T00:00:00.000Z"
+    }
+  ],
+  "feedback": [],
+  "orders": []
+}

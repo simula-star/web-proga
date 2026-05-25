@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog | MealDrop</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="catalog.css">
+    <link rel="stylesheet" href="lab8.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="lab9.css">
+  <link rel="stylesheet" href="lab10.css">
+</head>
+
+<body>
+
+<header class="header container">
+    <img src="menu 1.png" alt="" class="menu1">
+
+    <a href="saut.html" class="logo">
+        <img src="Logo_blue.png" alt="Logo" class="logo-icon">
+        <span class="logo-text">MealDrop</span>
+    </a>
+
+    <nav class="navigation">
+        <a href="saut.html" class="nav-home">Home</a>
+        <a href="#" class="nav-rest">All restaurants</a>
+        
+        <a href="favorites.html" class="nav-fav" style="margin-right: 15px; text-decoration: none; margin-top: 15px;">
+            ❤ Favorites
+        </a>
+
+        <a href="cart.html" class="cart-btn" style="text-decoration: none;">
+            <img src="grocery_basket_icon.png" alt="корзина">
+        </a>
+    </nav>
+</header>
+
+<main class="catalog-page container">
+
+    <h1 class="catalog-title">Food Catalog</h1>
+
+    <div class="catalog-controls" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 20px;">
+        <input type="text" id="searchInput" placeholder="Search by name..." class="search-input">
+        
+        <select id="sortSelect" class="sort-select">
+            <option value="">Sort by</option>
+            <option value="price_asc">Price (Low to High)</option>
+            <option value="price_desc">Price (High to Low)</option>
+            <option value="name_asc">Name (A-Z)</option>
+            <option value="rating_desc">Rating (High to Low)</option>
+        </select>
+
+        <input type="number" id="priceMin" placeholder="Min $" class="search-input" style="width: 100px;">
+        <input type="number" id="priceMax" placeholder="Max $" class="search-input" style="width: 100px;">
+    </div>
+
+    <div id="dynamicCategories" class="category-buttons"></div>
+
+    <div id="foodGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(550px, 1fr)); gap: 30px;">
+        </div>
+
+    <div class="pagination" style="margin-top: 30px; display: flex; justify-content: center; gap: 15px; align-items: center;">
+        <button id="prevPage" class="catalog-search">Previous</button>
+        <span id="pageInfo" style="font-size: 18px; font-weight: bold;">Page 1</span>
+        <button id="nextPage" class="catalog-search">Next</button>
+    </div>
+
+    <!-- Категории -->
+    <div class="category-buttons">
+
+        <button data-category="all">All</button>
+        <button data-category="Pizza">Pizza</button>
+        <button data-category="Burgers">Burgers</button>
+        <button data-category="Desserts">Desserts</button>
+        <button data-category="Sushi">Sushi</button>
+        <button data-category="Asian">Asian</button>
+
+    </div>
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-family: 'Montserrat', sans-serif;">Array Methods Demonstration:</h3>
+    <div class="method-buttons">
+        <button id="filterBtn" class="catalog-search">Filter (Price > $12)</button>
+        <button id="sortBtn" class="catalog-search">Sort by Rating</button>
+        <button id="reduceBtn" class="catalog-search">Reduce (Total Price)</button>
+        <button id="findBtn" class="catalog-search">Find (Rating > 4.8)</button>
+        <button id="someBtn" class="catalog-search">Some (Price &lt; $7?)</button>
+        <button id="everyBtn" class="catalog-search">Every (Rating > 4?)</button>
+        <button id="sliceBtn" class="catalog-search">Slice (First 5)</button>
+        <button id="reverseBtn" class="catalog-search">Reverse List</button>
+    </div>
+
+    <!-- Каталог -->
+    <div id="catalogContainer"></div>
+    <div id="pagination"></div>
+
+</main>
+
+<script src="catalog.js"></script>
+
+<script src="common.js"></script>
+<script src="lab9.js"></script>
+<script src="lab10.js"></script>
+</body>
+</html>

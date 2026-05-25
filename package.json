@@ -1,0 +1,11 @@
+{
+  "name": "mealdrop-lab10",
+  "version": "1.0.0",
+  "description": "MealDrop laboratory work 10: LocalStorage and data attributes",
+  "scripts": {
+    "server": "json-server --watch db.json --port 3010"
+  },
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}

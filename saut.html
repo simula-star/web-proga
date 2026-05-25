@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MealDrop Full Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lab8.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="lab9.css">
+  <link rel="stylesheet" href="lab10.css">
 </head>
 
 <body>
@@ -17,22 +21,29 @@
             <span class="logo-text">MealDrop</span>
         </a>
         <nav class="navigation">
-            <a href="#" class="nav-home">Home</a>
+            <a href="saut.html" class="nav-home">Home</a>
             <a href="#" class="nav-rest">All restaurants</a>
-            <button class="cart-btn"><img src="grocery_basket_icon.png" alt="корзина"></button>
+            
+            <a href="favorites.html" class="nav-fav" style="margin-right: 15px; text-decoration: none;">
+                ❤ Favorites
+            </a>
+
+            <a href="cart.html" class="cart-btn" style="text-decoration: none;">
+                <img src="grocery_basket_icon.png" alt="корзина">
+            </a>
         </nav>
     </header>
 
     <main>
-        <section class="hero container">
+        <section id="home" class="hero container">
             <div class="hero-content">
                 <h1 class="hero-text"><span class="bold-text">Hungry?</span> Find your next meal</h1>
-                <button class="cta-button">See all restaurants</button>
+                <a href="#restaurants" class="cta-button" style="display:inline-flex;align-items:center;text-decoration:none;">See all restaurants</a>
             </div>
             <img src="Ladies.svg" alt="People" class="hero-image">
         </section>
 
-        <section class="restaurant-section">
+        <section id="restaurants" class="restaurant-section">
             <h2 class="rest-text">Our favourite picks</h2>
             <div class="rest-mira">
                 <img src="pic1.png" alt="pic1">
@@ -158,12 +169,12 @@
             </div>
         </section>
 
-        <section class="categ-cont-sec container">
+        <section id="categories" class="categ-cont-sec container">
             <div class="categ-text-but">
                 <p class="text-categ">Categories</p>
-                <button class="button-categ">
+                <a href="catalog.html" class="button-categ">
                     <p class="button-text-categ">View all categories</p>
-                </button>
+                </a>
             </div>
             <div class="categories-pic">
                 <div class="categ-cont area-pizza">
@@ -198,6 +209,71 @@
             </div>
         </section>
 
+
+
+        <section id="slider" class="lab9-section container">
+            <h2 class="lab9-section-title">Featured meals slider</h2>
+            <div class="lab9-slider">
+                <article class="lab9-slide active">
+                    <div><h3>Fast pizza delivery</h3><p>Fresh pizza, hot cheese and quick delivery directly to your door.</p></div>
+                    <img src="pizza_pic.jpg" alt="Pizza delivery">
+                </article>
+                <article class="lab9-slide">
+                    <div><h3>Burgers for tonight</h3><p>Juicy burgers from local restaurants with simple online ordering.</p></div>
+                    <img src="burgers_pic.png" alt="Burger delivery">
+                </article>
+                <article class="lab9-slide">
+                    <div><h3>Desserts and comfort food</h3><p>Sweet picks, sushi, Asian meals and comfort food in one place.</p></div>
+                    <img src="desserts_pic.png" alt="Dessert delivery">
+                </article>
+                <div class="lab9-slider-controls">
+                    <button type="button" data-slider-prev>Prev</button>
+                    <button type="button" data-slider-next>Next</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="parallax" class="lab9-section container lab9-parallax">
+            <div class="lab9-parallax-layer lab9-parallax-bg">MealDrop</div>
+            <div class="lab9-parallax-layer lab9-parallax-mid"><img src="Banner block.png" alt="MealDrop banner"></div>
+            <div class="lab9-parallax-layer lab9-parallax-front"><div class="lab9-parallax-card"><h3>Parallax delivery story</h3><p>Background, middle and front layers move at different speeds while scrolling. One layer moves in the opposite direction to create depth.</p></div></div>
+        </section>
+
+        <section id="media" class="lab9-section container lab9-media-gallery">
+            <h2 class="lab9-section-title">Interactive media gallery</h2>
+            <div class="lab9-media-grid">
+                <div class="lab9-media-viewer">
+                    <img src="pizza_pic.jpg" alt="Pizza mood" data-media-image>
+                    <p class="lab9-player-status" data-player-status>Paused</p>
+                </div>
+                <div class="lab9-media-panel">
+                    <h3 data-media-title>Pizza mood</h3>
+                    <p>Click the buttons below: the image changes randomly and a unique sound effect plays for every image.</p>
+                    <div class="lab9-media-actions">
+                        <button type="button" data-random-media>Random meal image</button>
+                        <button type="button" data-random-media>Another surprise</button>
+                        <button type="button" data-video-trigger>Play video</button>
+                    </div>
+                    <label>Volume <input type="range" min="0" max="1" step="0.05" value="0.45" data-volume></label>
+                    <video class="lab9-video" controls muted loop src="assets/video/mealdrop-demo.mp4"></video>
+                </div>
+            </div>
+        </section>
+
+        <section id="map" class="lab9-section container lab9-map">
+            <h2 class="lab9-section-title">Our delivery office on the map</h2>
+            <iframe title="MealDrop office map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Minsk%20Belarus&output=embed"></iframe>
+        </section>
+
+        <section id="stats" class="lab9-section container">
+            <h2 class="lab9-section-title">Animated counters</h2>
+            <div class="lab9-stats">
+                <div class="lab9-stat"><strong data-counter="foods">0</strong><span>meals in catalog</span></div>
+                <div class="lab9-stat"><strong data-counter="cart">0</strong><span>items in cart</span></div>
+                <div class="lab9-stat"><strong data-counter="favorites">0</strong><span>favorite items</span></div>
+            </div>
+        </section>
+
     </main>
     <footer class="footer container">
         <div class="footer-cont">
@@ -222,6 +298,9 @@
         </div>
     </footer>
 
+<script src="common.js"></script>
+<script src="lab9.js"></script>
+<script src="lab10.js"></script>
 </body>
 
 </html>

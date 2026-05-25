@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback | MealDrop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="catalog.css">
+  <link rel="stylesheet" href="lab8.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="lab9.css">
+  <link rel="stylesheet" href="lab10.css">
+</head>
+<body>
+<header class="header container">
+  <img src="menu 1.png" alt="" class="menu1">
+  <a href="saut.html" class="logo"><img src="Logo_blue.png" alt="Logo" class="logo-icon"><span class="logo-text">MealDrop</span></a>
+  <nav class="navigation">
+    <a href="saut.html" class="nav-home">Home</a>
+    <a href="catalog.html" class="nav-rest">Catalog</a>
+    <a href="favorites.html" class="nav-fav">❤ Favorites</a>
+    <a href="cart.html" class="cart-btn"><img src="grocery_basket_icon.png" alt="cart"></a>
+  </nav>
+</header>
+
+<main class="container form-page form-page--single">
+  <section class="form-card">
+    <h1>Leave feedback</h1>
+    <p class="form-note">Only clients who bought a meal at least once can leave feedback. Administrators cannot leave feedback.</p>
+    <div id="feedbackAccess" class="form-note"></div>
+    <form id="feedbackForm" novalidate>
+      <label>Purchased meal <span>*</span><select id="foodSelect" required></select></label>
+      <small class="field-error" data-error-for="food"></small>
+      <label>Rating <span>*</span><input id="rating" type="number" min="1" max="5" step="1" value="5" required></label>
+      <small class="field-error" data-error-for="rating"></small>
+      <label>Review text <span>*</span><textarea id="reviewText" minlength="20" placeholder="Write at least 20 characters" required></textarea></label>
+      <small class="field-error" data-error-for="review"></small>
+      <button id="feedbackBtn" class="submit-btn" type="submit" disabled>Send feedback</button>
+    </form>
+  </section>
+</main>
+<script src="common.js"></script>
+<script src="feedback.js"></script>
+<script src="lab9.js"></script>
+<script src="lab10.js"></script>
+</body>
+</html>

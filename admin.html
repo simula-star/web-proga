@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel | MealDrop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="catalog.css">
+  <link rel="stylesheet" href="lab8.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="lab9.css">
+  <link rel="stylesheet" href="lab10.css">
+</head>
+<body>
+<header class="header container">
+  <img src="menu 1.png" alt="" class="menu1">
+  <a href="saut.html" class="logo"><img src="Logo_blue.png" alt="Logo" class="logo-icon"><span class="logo-text">MealDrop</span></a>
+  <nav class="navigation">
+    <a href="saut.html" class="nav-home">Home</a>
+    <a href="catalog.html" class="nav-rest">Catalog</a>
+    <a href="favorites.html" class="nav-fav">❤ Favorites</a>
+    <a href="feedback.html" class="nav-fav">Feedback</a>
+    <a href="cart.html" class="cart-btn"><img src="grocery_basket_icon.png" alt="cart"></a>
+  </nav>
+</header>
+
+<main class="container admin-page">
+  <section id="adminAccess" class="form-card"></section>
+  <section id="adminContent" hidden>
+    <h1 class="catalog-title">Admin panel</h1>
+    <div class="admin-grid">
+      <section class="form-card">
+        <h2>Add / edit meal</h2>
+        <form id="foodForm" novalidate>
+          <input id="foodId" type="hidden">
+          <label>Name <span>*</span><input id="foodName" type="text" required></label>
+          <small class="field-error" data-error-for="foodName"></small>
+          <label>Category <span>*</span><input id="foodCategory" type="text" required></label>
+          <small class="field-error" data-error-for="foodCategory"></small>
+          <div class="form-row">
+            <label>Price <span>*</span><input id="foodPrice" type="number" min="1" required></label>
+            <label>Rating <span>*</span><input id="foodRating" type="number" min="1" max="5" step="0.1" required></label>
+          </div>
+          <small class="field-error" data-error-for="foodNumbers"></small>
+          <label>Image file <span>*</span><input id="foodImage" type="text" placeholder="pizza_pic.jpg" required></label>
+          <small class="field-error" data-error-for="foodImage"></small>
+          <label>Description <span>*</span><textarea id="foodDescription" minlength="10" required></textarea></label>
+          <small class="field-error" data-error-for="foodDescription"></small>
+          <div class="admin-actions">
+            <button id="saveFoodBtn" class="submit-btn" type="submit" disabled>Save meal</button>
+            <button id="resetFoodBtn" type="button">Reset</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="form-card">
+        <h2>Catalog management</h2>
+        <div id="adminFoods" class="admin-list"></div>
+      </section>
+    </div>
+
+    <section class="form-card feedback-admin">
+      <h2>Feedback management</h2>
+      <div class="form-row">
+        <label>Filter by meal<select id="feedbackFoodFilter"><option value="">All meals</option></select></label>
+        <label>Filter by user<select id="feedbackUserFilter"><option value="">All users</option></select></label>
+      </div>
+      <div id="adminFeedback" class="admin-list"></div>
+    </section>
+  </section>
+</main>
+<script src="common.js"></script>
+<script src="admin.js"></script>
+<script src="lab9.js"></script>
+<script src="lab10.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+/* Lab 10: LocalStorage, data-attributes, user session */
+:root {
+  --md-bg: #ffffff;
+  --md-surface: #ffffff;
+  --md-text: #202020;
+  --md-muted: #666666;
+  --md-accent: #35b86b;
+  --md-accent-dark: #20844a;
+  --md-border: rgba(32, 32, 32, 0.14);
+  --md-shadow: rgba(0, 0, 0, 0.12);
+}
+
+body {
+  background: var(--md-bg);
+  color: var(--md-text);
+  transition: background-color .3s ease, color .3s ease;
+}
+
+body.theme-dark {
+  --md-bg: #111827;
+  --md-surface: #1f2937;
+  --md-text: #f8fafc;
+  --md-muted: #cbd5e1;
+  --md-accent: #7dd3fc;
+  --md-accent-dark: #38bdf8;
+  --md-border: rgba(255, 255, 255, 0.16);
+  --md-shadow: rgba(0, 0, 0, 0.35);
+}
+
+body.theme-dark .header,
+body.theme-dark .food-card,
+body.theme-dark .fav-card,
+body.theme-dark .cart-page,
+body.theme-dark .catalog-page,
+body.theme-dark .form-card,
+body.theme-dark .admin-card,
+body.theme-dark .restaurant-section,
+body.theme-dark .rest-card,
+body.theme-dark .lab10-modal__content {
+  background: var(--md-surface) !important;
+  color: var(--md-text) !important;
+  border-color: var(--md-border) !important;
+  box-shadow: 0 18px 40px var(--md-shadow);
+}
+
+body.theme-dark a,
+body.theme-dark h1,
+body.theme-dark h2,
+body.theme-dark h3,
+body.theme-dark p,
+body.theme-dark span,
+body.theme-dark label,
+body.theme-dark strong {
+  color: var(--md-text);
+}
+
+body.theme-dark input,
+body.theme-dark select,
+body.theme-dark textarea {
+  background: #0f172a !important;
+  color: #f8fafc !important;
+  border-color: var(--md-border) !important;
+}
+
+body.theme-dark button,
+body.theme-dark .catalog-search,
+body.theme-dark .cta-button,
+body.theme-dark .awrd-button {
+  border-color: var(--md-accent) !important;
+}
+
+.lab10-panel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 12px;
+  flex-wrap: wrap;
+}
+
+.lab10-lang,
+.lab10-theme,
+.lab10-profile,
+.lab10-reset,
+.lab10-logout {
+  min-height: 34px;
+  padding: 7px 11px;
+  border: 1px solid var(--md-border);
+  border-radius: 999px;
+  background: var(--md-surface);
+  color: var(--md-text);
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.lab10-lang:hover,
+.lab10-theme:hover,
+.lab10-profile:hover,
+.lab10-reset:hover,
+.lab10-logout:hover {
+  transform: translateY(-2px);
+  border-color: var(--md-accent);
+}
+
+.lab10-lang.active,
+.lab10-theme.active {
+  background: var(--md-accent);
+  color: #ffffff;
+  border-color: var(--md-accent);
+}
+
+.lab10-profile {
+  width: 36px;
+  padding: 0;
+  font-size: 18px;
+}
+
+.lab10-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  place-items: center;
+  padding: 18px;
+  background: rgba(0,0,0,.55);
+  z-index: 9999;
+}
+
+.lab10-modal.open {
+  display: grid;
+}
+
+.lab10-modal__content {
+  width: min(540px, 100%);
+  max-height: 88vh;
+  overflow: auto;
+  padding: 24px;
+  border-radius: 22px;
+  background: var(--md-surface);
+  color: var(--md-text);
+  box-shadow: 0 24px 60px var(--md-shadow);
+  position: relative;
+}
+
+.lab10-modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  background: #ef4444;
+  color: white;
+  font-size: 18px;
+}
+
+.lab10-profile-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.lab10-profile-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.lab10-profile-form input {
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--md-border);
+  padding: 0 12px;
+}
+
+.lab10-profile-form button[type="submit"] {
+  height: 44px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--md-accent);
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.theme-dark-image {
+  filter: brightness(.86) contrast(1.08) saturate(.9);
+}
+
+@media (max-width: 768px) {
+  .lab10-panel {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
